@@ -1,6 +1,6 @@
 // api/getEvents.js
 
-export default handler =async () => {
+export default handler =async (req, res) => {
     const API_KEY = process.env.API_KEY;
 
     let url = `http://openapi.seoul.go.kr:8088/${API_KEY}/json/culturalEventInfo/1/1000`;
