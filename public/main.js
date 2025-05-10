@@ -42,7 +42,7 @@ const renderEvent = () => {
 
 getEvent()
 
-
+console.log(culturalItems)
 
 
 
