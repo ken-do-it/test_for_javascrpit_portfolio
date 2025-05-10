@@ -2,6 +2,8 @@
 
 let culturalItems = []
 
+console.log(culturalItems)
+
 const getEvent = async () => {
     // let url = new URL(`http://openapi.seoul.go.kr:8088/${API_KEY}/json/culturalEventInfo/1/12/`)
     // const response = await fetch(url)
