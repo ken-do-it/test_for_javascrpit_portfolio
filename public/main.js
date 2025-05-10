@@ -3,8 +3,9 @@
 let culturalItems = []
 
 const getEvent = async () => {
-    let url = new URL(`http://openapi.seoul.go.kr:8088/${API_KEY}/json/culturalEventInfo/1/12/`)
-    const response = await fetch(url)
+    // let url = new URL(`http://openapi.seoul.go.kr:8088/${API_KEY}/json/culturalEventInfo/1/12/`)
+    // const response = await fetch(url)
+    const response = await fetch ('/api/getEvents')
     const data = await response.json()
     console.log(data)
     culturalItems = data.culturalEventInfo.row
