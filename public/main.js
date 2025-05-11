@@ -1,6 +1,10 @@
 
 
 let culturalItems = []
+let totalResults = 0
+let page = 1
+let pageSize = 10
+let groupSize =5
 
 console.log(culturalItems)
 
@@ -37,12 +41,32 @@ const renderEvent = () => {
     document.getElementById("cultural-Card-id").innerHTML = culturalEventHTML;
 }
 
+const renderPageHTML = () => {
+    //totalPage
+    let totalPage = totalResults/pageSize
+    //groupPage
+    let groupPage = Math.ceil(page/groupSize)
+    //lastPage
+    let lastPage = Math.ceil(groupPage*groupSize)
+    if (lastPage < groupPage) {
+        groupPage = lastPage 
+    }
+    // firstPage
+    let firstPage = Math.ceil(lastPage -(groupPage-1)) <=0 ? 1 :lastPage -(groupPage-1)
 
+    let paginationHTML = ""
+    for (let i=firstPage; i<=lastPage; i++){
+        paginationHTML += `<li class="page-item" onclick="moveToPage(${i})"><a class="page-link">${i}</a></li>`
+    }
+}
 
+const moveToPage = (pageNum) => {
+    page = pageNum
+    getEvent()
+}
 
 getEvent()
 
-console.log(culturalItems)
 
 
 
