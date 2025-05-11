@@ -44,11 +44,11 @@ const getEvent = async () => {
 
 
 
-    let url = new URL(`http://openapi.seoul.go.kr:8088/${API_KEY}/json/culturalEventInfo/1/1000/`)
-    const response = await fetch(url)
+    // let url = new URL(`http://openapi.seoul.go.kr:8088/${API_KEY}/json/culturalEventInfo/1/1000/`)
+    // const response = await fetch(url)
 
     //⬇️ 하단 await fetch ('/api/getEvents') 배포용 
-    // const response = await fetch ('/api/getEvents')
+    const response = await fetch ('/api/getEvents')
     const data = await response.json()
     totalResults = data.list_total_count
     console.log(data)
