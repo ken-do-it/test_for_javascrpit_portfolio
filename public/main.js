@@ -58,6 +58,7 @@ const renderPageHTML = () => {
     for (let i=firstPage; i<=lastPage; i++){
         paginationHTML += `<li class="page-item" onclick="moveToPage(${i})"><a class="page-link">${i}</a></li>`
     }
+    document.querySelector(".pagination").innerHTML =  paginationHTML
 }
 
 const moveToPage = (pageNum) => {
