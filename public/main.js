@@ -43,6 +43,7 @@ const getEvent = async () => {
     const response = await fetch ('/api/getEvents')
 
     
+    
     const data = await response.json()
     totalResults = data.list_total_count
     console.log(data)
