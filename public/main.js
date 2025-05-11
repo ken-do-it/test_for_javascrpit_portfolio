@@ -17,6 +17,7 @@ const getEvent = async () => {
     culturalItems = data.culturalEventInfo.row
     
     renderEvent()
+    renderPageHTML()
 }
 
 const renderEvent = () => {
