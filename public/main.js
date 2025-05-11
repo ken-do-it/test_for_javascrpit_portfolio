@@ -62,7 +62,7 @@ const renderPageHTML = () => {
     document.querySelector(".pagination").innerHTML =  paginationHTML
 }
 
-const moveToPage = (pageNum) => {
+ window.moveToPage = (pageNum) => {
     page = pageNum
     getEvent()
 }
